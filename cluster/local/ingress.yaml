@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: keycloak
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect : "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect : "true"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: keycloak.lsc-sde.local
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: proxy-public
+            port: 
+              name: http
+  tls:
+  - hosts:
+    - keycloak.lsc-sde.local
+    secretName: keycloak.lsc-sde.local-tls
