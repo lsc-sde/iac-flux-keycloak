@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: keycloak-postgres
+  name: keycloak-postgres-disk
 spec:
   accessModes:
     - ReadWriteOnce

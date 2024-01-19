@@ -46,4 +46,4 @@ spec:
 
         - name: pgdata
           persistentVolumeClaim:
-            claimName: keycloak-postgres
+            claimName: keycloak-postgres-disk
