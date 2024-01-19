@@ -5,3 +5,5 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
+  capacity:
+    storage: 10Gi
