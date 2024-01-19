@@ -11,8 +11,10 @@ spec:
       name: keycloak-secrets
       key: keycloak-pgsql-username
     passwordSecret:
-      name: keycloak-db-secret
+      name: keycloak-secrets
       key: keycloak-pgsql-password
+  ingress:
+    className: nginx
   http:
     tlsSecret: keycloak.lsc-sde.local-tls
   hostname:
