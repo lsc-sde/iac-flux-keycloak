@@ -28,9 +28,16 @@ spec:
                 secretKeyRef:
                   name: keycloak-secrets
                   key: keycloak-pgsql-password
+                  
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: keycloak-secrets
+                  key: keycloak-pgsql-username
+
             - name: PGDATA
               value: /data/pgdata
-              
+
             - name: POSTGRES_DB
               value: keycloak
       volumes:
