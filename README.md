@@ -9,6 +9,7 @@ kubectl config use-context docker-desktop
 kubectl create namespace keycloak
 flux create source git keycloak --url="https://github.com/lsc-sde/iac-flux-keycloak" --branch=main --namespace=keycloak
 flux create kustomization keycloak-sources --source="GitRepository/keycloak" --namespace=keycloak --path="./sources" --interval=1m --prune=true --health-check-timeout=10m --wait=false
+flux create kustomization keycloak-cluster-config --source="GitRepository/keycloak" --namespace=keycloak --path="./cluster/local" --interval=1m --prune=true --health-check-timeout=10m --wait=false
 ```
 
 This should in turn deploy all of the resulting resources on your local cluster.

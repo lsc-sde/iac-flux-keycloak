@@ -15,7 +15,7 @@ spec:
         path: "/"
         backend:
           service:
-            name: proxy-public
+            name: keycloak-operator
             port: 
               name: http
   tls:
