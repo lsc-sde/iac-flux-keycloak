@@ -4,3 +4,5 @@ namespace: keycloak
 resources:
 - certificate.yaml
 - ingress.yaml
+- pvc.yaml
+- secret.yaml
