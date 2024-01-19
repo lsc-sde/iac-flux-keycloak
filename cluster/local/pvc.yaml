@@ -10,4 +10,3 @@ spec:
       storage: 10Gi
   storageClassName: hostpath
   volumeMode: Filesystem
-  volumeName: pvc-4d7cbb64-3642-4d0b-804e-f70ff6684c4c
