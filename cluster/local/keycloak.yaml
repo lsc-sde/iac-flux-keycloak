@@ -1,0 +1,19 @@
+apiVersion: k8s.keycloak.org/v2alpha1
+kind: Keycloak
+metadata:
+  name: keycloak-instance
+spec:
+  instances: 1
+  db:
+    vendor: postgres
+    host: postgres-db
+    usernameSecret:
+      name: keycloak-secrets
+      key: keycloak-pgsql-username
+    passwordSecret:
+      name: keycloak-db-secret
+      key: keycloak-pgsql-password
+  http:
+    tlsSecret: keycloak.lsc-sde.local-tls
+  hostname:
+    hostname: keycloak.lsc-sde.local
