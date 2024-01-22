@@ -3,4 +3,3 @@ kind: Kustomization
 namespace: keycloak
 resources:
   - 23.0.4
-  - postgresql
