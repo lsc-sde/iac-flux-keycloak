@@ -18,3 +18,5 @@ spec:
     enabled: false
   hostname:
     hostname: keycloak.lsc-sde.local
+  http:
+    tlsSecret: keycloak.lsc-sde.local-tls
