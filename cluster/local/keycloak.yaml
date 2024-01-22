@@ -7,7 +7,7 @@ spec:
   db:
     vendor: postgres
     database: keycloak
-    host: 192.168.254.160
+    host: kubernetes.docker.internal
     usernameSecret:
       name: keycloak-secrets
       key: keycloak-pgsql-username
