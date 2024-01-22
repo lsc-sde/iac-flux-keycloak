@@ -7,7 +7,7 @@ spec:
   db:
     vendor: postgres
     database: keycloak
-    host: host.docker.internal
+    host: cluster.lsc-sde.local
     usernameSecret:
       name: keycloak-secrets
       key: keycloak-pgsql-username
