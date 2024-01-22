@@ -2,6 +2,10 @@
 Flux configuration for Keycloak
 
 ## Developer Guide
+Keycloak requires a database in order to function correctly, in a local environment this can be postgresql installed on your local machine (or running in a container of it's own). Please provision this separately before continuing.
+
+It is recommended that you create your own branch on the repository with your own database details so that you can test locally without impacting on others that may be using it.
+
 To test the changes, ensure that you are on your developer machine and that the context is set correctly to your local instance please amend the following script to use the target branch:
 
 ```bash

@@ -6,6 +6,7 @@ spec:
   instances: 1
   db:
     vendor: postgres
+    database: keycloak
     host: 192.168.254.160
     usernameSecret:
       name: keycloak-secrets
