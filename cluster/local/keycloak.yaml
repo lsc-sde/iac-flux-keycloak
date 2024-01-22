@@ -7,6 +7,7 @@ spec:
   db:
     vendor: postgres
     database: keycloak
+    httpEnabled: false
     host: 192.168.254.160
     usernameSecret:
       name: keycloak-secrets
