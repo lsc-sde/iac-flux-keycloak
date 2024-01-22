@@ -1,7 +1,7 @@
 apiVersion: k8s.keycloak.org/v2alpha1
 kind: Keycloak
 metadata:
-  name: keycloak-instance
+  name: default-instance
 spec:
   instances: 1
   db:
@@ -16,8 +16,6 @@ spec:
       name: keycloak-secrets
       key: keycloak-pgsql-password
   ingress:
-    className: nginx
-  http:
-    tlsSecret: keycloak.lsc-sde.local-tls
+    enabled: false
   hostname:
     hostname: keycloak.lsc-sde.local

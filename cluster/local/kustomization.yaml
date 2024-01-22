@@ -5,3 +5,4 @@ resources:
 - certificate.yaml
 - secret.yaml
 - keycloak.yaml
+- ingress.yaml
