@@ -17,7 +17,7 @@ spec:
           service:
             name: default-instance-service
             port: 
-              name: http
+              name: https
   tls:
   - hosts:
     - keycloak.lsc-sde.local
