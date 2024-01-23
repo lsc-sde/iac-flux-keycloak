@@ -21,5 +21,5 @@ spec:
               name: https
   tls:
   - hosts:
-    - keycloak.lsc-sde.local
-    secretName: keycloak.lsc-sde.local-tls
+    - sandbox-keycloak.privatelink.uksouth.azmk8s.io
+    secretName: sandbox-keycloak.privatelink.uksouth.azmk8s.io-tls

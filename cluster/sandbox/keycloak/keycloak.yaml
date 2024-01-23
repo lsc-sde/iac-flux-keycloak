@@ -7,7 +7,7 @@ spec:
   db:
     vendor: postgres
     database: keycloak
-    host: cluster.lsc-sde.local
+    host: lscsdesandbox-sql.database.windows.net
     usernameSecret:
       name: keycloak-secrets
       key: db_username
@@ -17,6 +17,6 @@ spec:
   ingress:
     enabled: false
   hostname:
-    hostname: keycloak.lsc-sde.local
+    hostname: sandbox-keycloak.privatelink.uksouth.azmk8s.io
   http:
-    tlsSecret: keycloak.lsc-sde.local-tls
+    tlsSecret: sandbox-keycloak.privatelink.uksouth.azmk8s.io-tls

@@ -1,11 +1,11 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: keycloak.lsc-sde.local-tls
+  name: sandbox-keycloak.privatelink.uksouth.azmk8s.io-tls
 spec:
   isCA: false
-  commonName: keycloak.lsc-sde.local
-  secretName: keycloak.lsc-sde.local-tls
+  commonName: sandbox-keycloak.privatelink.uksouth.azmk8s.io
+  secretName: sandbox-keycloak.privatelink.uksouth.azmk8s.io-tls
   subject:
     organizations:
     - lsc-sde
@@ -13,7 +13,7 @@ spec:
   - server auth
   - client auth
   dnsNames: 
-  - keycloak.lsc-sde.local
+  - sandbox-keycloak.privatelink.uksouth.azmk8s.io
   privateKey:
     algorithm: ECDSA
     size: 256

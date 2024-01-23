@@ -7,7 +7,7 @@ spec:
   db:
     vendor: mssql
     database: keycloak
-    host: lscsdesandbox-sql.database.windows.net
+    host: cluster.lsc-sde.local
     usernameSecret:
       name: keycloak-secrets
       key: keycloak-pgsql-username
@@ -17,6 +17,6 @@ spec:
   ingress:
     enabled: false
   hostname:
-    hostname: sandbox-keycloak.privatelink.uksouth.azmk8s.io
+    hostname: keycloak.lsc-sde.local
   http:
-    tlsSecret: sandbox-keycloak.privatelink.uksouth.azmk8s.io-tls
+    tlsSecret: keycloak.lsc-sde.local-tls
