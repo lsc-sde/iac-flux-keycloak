@@ -19,7 +19,23 @@ spec:
             name: default-instance-service
             port: 
               name: https
+
+  - host: sandbox-keycloak.xlscsde.nhs.uk
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: default-instance-service
+            port: 
+              name: https
+  
   tls:
   - hosts:
     - sandbox-keycloak.privatelink.uksouth.azmk8s.io
     secretName: sandbox-keycloak.privatelink.uksouth.azmk8s.io-tls
+  
+  - hosts:
+    - sandbox-keycloak.xlscsde.nhs.uk
+    secretName: sandbox-keycloak.xlscsde.nhs.uk-tls
