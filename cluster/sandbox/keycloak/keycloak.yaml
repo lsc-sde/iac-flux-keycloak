@@ -5,18 +5,18 @@ metadata:
 spec:
   instances: 1
   db:
-    vendor: mssql
+    vendor: postgres
     database: keycloak
-    host: lscsdesandbox-sql.database.windows.net
+    host: cluster.lsc-sde.local
     usernameSecret:
       name: keycloak-secrets
-      key: keycloak-pgsql-username
+      key: db_username
     passwordSecret:
       name: keycloak-secrets
-      key: keycloak-pgsql-password
+      key: db_password
   ingress:
     enabled: false
   hostname:
-    hostname: sandbox-keycloak.privatelink.uksouth.azmk8s.io
+    hostname: keycloak.lsc-sde.local
   http:
-    tlsSecret: sandbox-keycloak.privatelink.uksouth.azmk8s.io-tls
+    tlsSecret: keycloak.lsc-sde.local-tls

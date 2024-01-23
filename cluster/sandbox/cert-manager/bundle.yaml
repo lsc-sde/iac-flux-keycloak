@@ -1,0 +1,25 @@
+apiVersion: trust.cert-manager.io/v1alpha1
+kind: Bundle
+metadata:
+  name: keycloak-certificate-authority  
+spec:
+  sources:
+  - useDefaultCAs: false
+
+  - secret:
+      name: "keycloak-certificate-authority-tls"
+      key: "tls.crt"
+
+  target:
+    configMap:
+      key: "keycloak-certs.pem"
+    additionalFormats:
+      jks:
+        key: "keycloak.jks"
+      pkcs12:
+        key: "keycloak.p12"
+
+    namespaceSelector:
+      matchLabels:
+        lsc-sde.io/injectKeycloakCertificates: "true"
+        
