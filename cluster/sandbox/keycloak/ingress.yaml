@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: keycloak.lsc-sde.local
+  - host: sandbox-keycloak.privatelink.uksouth.azmk8s.io
     http:
       paths:
       - pathType: Prefix
