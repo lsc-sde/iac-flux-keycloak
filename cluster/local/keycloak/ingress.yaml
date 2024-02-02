@@ -6,6 +6,7 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect : "true"
     nginx.ingress.kubernetes.io/force-ssl-redirect : "true"
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    xlscsde.nhs.uk/dns-record: keycloak
 spec:
   ingressClassName: nginx
   rules:
