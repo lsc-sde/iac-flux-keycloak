@@ -19,6 +19,6 @@ spec:
   ingress:
     enabled: false
   hostname:
-    hostname: ${dns_prefix}keycloak.${dns_zone}
+    hostname: ${dns_prefix}keycloak.${private_dnz_zone}
   http:
-    tlsSecret: ${dns_prefix}keycloak.${dns_zone}-tls
+    tlsSecret: ${dns_prefix}keycloak.${private_dnz_zone}-tls
