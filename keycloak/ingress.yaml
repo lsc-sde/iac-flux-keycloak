@@ -10,7 +10,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: sandbox-keycloak.privatelink.uksouth.azmk8s.io
+  - host: ${dns_prefix}keycloak.{dns_zone}
     http:
       paths:
       - pathType: Prefix
@@ -20,23 +20,7 @@ spec:
             name: default-instance-service
             port: 
               name: https
-
-  - host: sandbox-keycloak.xlscsde.nhs.uk
-    http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: default-instance-service
-            port: 
-              name: https
-  
   tls:
   - hosts:
-    - sandbox-keycloak.privatelink.uksouth.azmk8s.io
-    secretName: sandbox-keycloak.privatelink.uksouth.azmk8s.io-tls
-  
-  - hosts:
-    - sandbox-keycloak.xlscsde.nhs.uk
-    secretName: sandbox-keycloak.xlscsde.nhs.uk-tls
+    - ${dns_prefix}keycloak.{dns_zone}
+    secretName: ${dns_prefix}keycloak.{dns_zone}-tls
