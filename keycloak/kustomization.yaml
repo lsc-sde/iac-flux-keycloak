@@ -4,6 +4,5 @@ namespace: keycloak
 resources: 
 - keycloak.yaml
 - secret.yaml
-- secret-job.yaml
 - ingress.yaml
 - 23.0.4
