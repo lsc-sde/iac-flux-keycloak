@@ -1,6 +1,9 @@
 # iac-flux-keycloak
 Flux configuration for Keycloak
 
+## Deprecation Notice
+This flux configuration is deprecated 
+
 ## Developer Guide
 Keycloak requires a database in order to function correctly, in a local environment this can be postgresql installed on your local machine (or running in a container of it's own). Please provision this separately before continuing.
 
