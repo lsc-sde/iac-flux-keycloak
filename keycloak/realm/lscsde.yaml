@@ -1,0 +1,58 @@
+apiVersion: k8s.keycloak.org/v2alpha1
+kind: KeycloakRealmImport
+metadata:
+  name: lscsde
+spec:
+  keycloakCRName: default-instance
+  realm:
+    id: lsc-sde
+    realm: lsc-sde
+    displayName: Lancashire and South Cumbria Secure Data Environment
+    enabled: true
+    clients:
+    - clientId: jupyter
+      name: Jupyter Hub
+      description: Client Used for Jupyter Hub
+      rootUrl: "https://jupyter.xlscsde.local"
+      adminUrl: "https://jupyter.xlscsde.local"
+      baseUrl: "https://jupyter.xlscsde.local"
+      enabled: true
+      clientAuthenticatorType: client-secret
+      secret: "jupyter"
+      redirectUris:
+      - "https://jupyter.xlscsde.local"
+      webOrigins:
+      - "https://jupyter.xlscsde.local"
+      protocol: openid-connect
+      standardFlowEnabled: true
+      implicitFlowEnabled: false
+      directAccessGrantsEnabled: true
+      serviceAccountsEnabled: true
+      authorizationServicesEnabled: true
+      publicClient: false
+      frontchannelLogout: true
+      bearerOnly: false
+      consentRequired: false
+    - clientId: guacamole
+      name: Apache Guacamole
+      description: Client Used for Apache Guacamole
+      rootUrl: "https://guacamole.xlscsde.local"
+      adminUrl: "https://guacamole.xlscsde.local"
+      baseUrl: "https://guacamole.xlscsde.local"
+      enabled: true
+      clientAuthenticatorType: client-secret
+      secret: "guacamole"
+      redirectUris:
+      - "https://guacamole.xlscsde.local"
+      webOrigins:
+      - "https://guacamole.xlscsde.local"
+      protocol: openid-connect
+      standardFlowEnabled: false
+      implicitFlowEnabled: true
+      directAccessGrantsEnabled: true
+      serviceAccountsEnabled: true
+      authorizationServicesEnabled: true
+      publicClient: true
+      frontchannelLogout: true
+      bearerOnly: false
+      consentRequired: false
