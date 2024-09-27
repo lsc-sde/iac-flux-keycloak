@@ -7,16 +7,16 @@ spec:
   db:
     vendor: postgres
     database: keycloak
-    host: cluster.lsc-sde.local
+    host: ${PG_FQDN}
     usernameSecret:
-      name: keycloak-secrets
-      key: keycloak-pgsql-username
+      name: keycloak-db-secrets
+      key: db_username
     passwordSecret:
-      name: keycloak-secrets
-      key: keycloak-pgsql-password
+      name: keycloak-db-secrets
+      key: db_password
   ingress:
     enabled: false
   hostname:
-    hostname: keycloak.lsc-sde.local
+    hostname: ${dns_prefix}keycloak.${private_dnz_zone}
   http:
-    tlsSecret: keycloak.lsc-sde.local-tls
+    tlsSecret: ${dns_prefix}keycloak.${private_dnz_zone}-tls
