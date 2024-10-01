@@ -11,5 +11,5 @@ jobs:
     uses: lsc-sde/lsc-sde/.github/workflows/flux-release.yaml@main
     with:
       directory: products/sde-3rd-party/keycloak/iac-flux-keycloak
-      yamlPath: keycloak_branch
+      yamlPath: keycloak
     secrets: inherit
