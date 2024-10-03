@@ -20,7 +20,7 @@ spec:
 
   target:
     configMap:
-      key: "keycloak-certs.pem"
+      key: "ca-certificates.crt"
     additionalFormats:
       jks:
         key: "keycloak.jks"
@@ -29,5 +29,5 @@ spec:
 
     namespaceSelector:
       matchLabels:
-        lsc-sde.io/injectKeycloakCertificates: "true"
+        kubernetes.io/metadata.name: ${keycloak_namespace}
         
