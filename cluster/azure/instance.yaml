@@ -4,8 +4,6 @@ metadata:
   name: default-instance
 spec:
   instances: 1
-  transaction:
-    xaEnabled: false
   db:
     vendor: postgres
     database: keycloak
