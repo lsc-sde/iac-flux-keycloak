@@ -7,9 +7,9 @@ spec:
   transaction:
     xaEnabled: false
   db:
-    vendor: mssql
+    vendor: postgres
     database: keycloak
-    host: ${PG_FQDN}
+    host: ${postgresql_server}
     usernameSecret:
       name: keycloak-db-secrets
       key: db_username
