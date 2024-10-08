@@ -5,3 +5,4 @@ resources:
 - ingress.yaml
 - 25.0.4
 - keycloak-awms
+- network-policies.yaml
